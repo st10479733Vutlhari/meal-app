@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
             "Oats with milk",
             "Omelette",
             "Toasted bread with avocado,eggs and a cup of tea"
-        )
+        )// change
         val afternoon = listOf(
             "Chicken cajun wrap",
             "Sheet pan crispy ramen",
@@ -52,7 +52,7 @@ class MainActivity : AppCompatActivity() {
             "Tacos",
             "Beef stir fry",
             "Snacks(energy bar, muesli and yogurt, potato chips with dip sauce",
-        )
+        )// change
         val evening = listOf(
             "Mac and cheese",
             "Creamy french onion pasta",
@@ -63,7 +63,7 @@ class MainActivity : AppCompatActivity() {
             "Spicy beef with rice and sweetcorn",
             "Skillet lasagna",
             "Deserts(chocolate cake, malva pudding, vanilla ice-cream with cookies, milkshake)"
-        )
+        )// change
 
         mealButton.setOnClickListener {
             val timeOfDay = timeEditText.text.toString().lowercase()

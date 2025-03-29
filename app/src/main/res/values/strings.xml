@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Meal app</string>
+    <string name="recommendations">Recommendations</string>
+    <string name="enter_time_of_day_e_g_morning">Enter time of day (e.g Morning)</string>
+    <string name="meal_recommendations">Meal Recommendations</string>
+    <string name="reset">Reset</string>
+    <string name="exit">Exit</string>
+    <string name="enter_time">Enter time</string>
+    <string name="recommendation">Recommendation</string>
+</resources>
