@@ -2,10 +2,10 @@ name: Generated APK AAB (Upload - Create Artifact To Github Action)
 
 env:
   # The name of the main module repository
-  main_project_module: app
+  main_project_module: meal app
 
   # The name of the Play Store
-  playstore_name: IIECat
+  playstore_name: Google playstore
 
 on:
 #Where release is written , must watch your branch name , I would suggest cloning your branch at the end called release so it only builds the final code called release
@@ -30,10 +30,10 @@ jobs:
 
     # Set Repository Name As Env Variable
     - name: Set repository name as env variable 
-      run: echo "repository_name=$(echo '${{ github.repository }}' | awk -F '/'  '{print $2}')" >> $GITHUB_ENV
+      run:  "repository_name=${{ st10479733Vutlhari/meal-app }} >> $GITHUB_ENV
        
     - name: Set Up JDK
-      uses: actions/setup-java@v3
+      uses: actions/setup-java@v4
       with:
          distribution: 'zulu' # See 'Supported distributions' for available options
          java-version: '17'
@@ -66,14 +66,14 @@ jobs:
   # Upload Artifact Build
   # Noted For Output [main_project_module]/build/outputs/apks/debug/
     - name: Upload APK Debug - ${{ env.repository_name }}
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with: 
         name: ${{ env.date_today }} - ${{ env.playstore_google }} - ${{ env.repository_st10479733Vutlhari/meal-app }} - APK(s) debug generated
         path: ${{ env.main_project_module }}/build/apk/debug/
 
  # Noted For Output [main_project_module]/build/outouts/apk/release
     - name: Upload APK Release - ${{ env.repository_name }}
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: ${{ env.date_today }} - ${{ env.playstore_google }} - ${{ env.repository_st10479733Vutlhari/meal-app }} - APK(s) release generated
         path: ${{ env.main_project_module }}/build/apk/release/
