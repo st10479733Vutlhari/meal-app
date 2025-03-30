@@ -65,21 +65,21 @@ jobs:
 
   # Upload Artifact Build
   # Noted For Output [main_project_module]/build/outputs/apks/debug/
-    - name: Upload APK Debug - ${{ env.repository_st10479733Vutlhari/meal-app }}
+    - name: Upload APK Debug - ${{ env.repository_name }}
       uses: actions/upload-artifact@v3
       with: 
-        name: ${{ env.date_31 march 2025 }} - ${{ env.playstore_google }} - ${{ env.repository_st10479733Vutlhari/meal-app }} - APK(s) debug generated
+        name: ${{ env.date_today }} - ${{ env.playstore_google }} - ${{ env.repository_st10479733Vutlhari/meal-app }} - APK(s) debug generated
         path: ${{ env.main_project_module }}/build/apk/debug/
 
  # Noted For Output [main_project_module]/build/outouts/apk/release
-    - name: Upload APK Release - ${{ env.repository_st10479733Vutlhari/meal-app }}
+    - name: Upload APK Release - ${{ env.repository_name }}
       uses: actions/upload-artifact@v3
       with:
-        name: ${{ env.date_30 march 2025 }} - ${{ env.playstore_google }} - ${{ env.repository_st10479733Vutlhari/meal-app }} - APK(s) release generated
+        name: ${{ env.date_today }} - ${{ env.playstore_google }} - ${{ env.repository_st10479733Vutlhari/meal-app }} - APK(s) release generated
         path: ${{ env.main_project_module }}/build/apk/release/
 
   # Noted For Output [main_project_module]/build/outouts/apk/release
-    - name: Upload AAB (App Bundle) Release - ${{ env.repository_st10479733Vutlhari/meal-app }}
+    - name: Upload AAB (App Bundle) Release - ${{ env.repository_name }}
       uses: actions/upload-artifact@v3
       with:
         name: ${{ env.date_30 march 2025 }} - ${{ env.playstore_google }} - ${{ env.repository_st10479733Vutlhari/meal-app }} - App bundle(s) AAB release generated
