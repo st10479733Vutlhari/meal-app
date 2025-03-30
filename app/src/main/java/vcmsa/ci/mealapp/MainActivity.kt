@@ -64,7 +64,7 @@ class MainActivity : AppCompatActivity() {
             "Skillet lasagna",
             "Deserts(chocolate cake, malva pudding, vanilla ice-cream with cookies, milkshake)"
         )// change
-
+         //This button was generated with the help of chatgpt
         mealButton.setOnClickListener {
             val timeOfDay = timeEditText.text.toString().lowercase()
              if (timeOfDay == "morning") {
