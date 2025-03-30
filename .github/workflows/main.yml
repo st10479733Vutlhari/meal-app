@@ -4,24 +4,50 @@ on:
   push:
     branches:
      - main
+  pull_request: 
+       branches:
+        - main
 
 jobs:
    build:
      runs-on: ubuntu-latest
      steps:
-       - name: Checkout code
-         uses: actions/checout@v2
+       - name: Checkout repository
+         uses: actions/checkout@v3
 
        - name: Set up JDK 17
          uses: action/setup-java@v2
          with:
+             distribution: 'temurin'
              java-version: '17'
+
+       - name: Set up Android SDK
+         uses:
+             andriod-actions/setup-android@v2
+
+       - name: Grant Execute Permission for Gradle
+         run: chmod +x gradlew
+
+       - name: Run Unit Tests 
+         run: ./gradlew testDebugUnitTest
+
+       - name: Run UI Tests
+         run: ./gradlew connctedAndroidTest
+
+       - name: Build Debug APK
+         run: ./gradlew assembleDebug
 
        - name: Build APK
          run: ./gradle assembleRelease
 
-       - name: Upload APK
-         uses: actions/upload-artifact@v2
+       - name: Upload Debug APK
+         uses: actions/upload-artifact@v3
+         with: 
+           name: meal-app-debug-apk
+           path: app/build/outputs/apk/debug/app-debug.apk
+
+       - name: Upload  Release APK
+         uses: actions/upload-artifact@v3
          with:
             name: meal-app-apk
             path: app/build/outputs/apk/release/app-release.apk
