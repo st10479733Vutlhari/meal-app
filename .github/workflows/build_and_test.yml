@@ -1,0 +1,40 @@
+name: Meal app Build, Test and Run
+
+on: 
+ push:
+  branches: [ "main" ]
+
+jobs:
+   build_test_run:
+      runs-on: ubuntu-latest
+
+ 
+      steps:  
+       - uses: actions/checkout@v3
+       - name: Set up JDK
+         uses: actions/setup-java@v3
+         with:
+           java-version: '17'
+           distribution: 'temurin'
+       - name: Set up Android SDK
+         uses: android-actions/setup-android@v2 # added this
+       - name: Build with Gradle
+         run: ./gradlew assembleDebug
+       - name: Run Unit Tests
+         run: ./gradlew testDebugUnitTest #unit tests
+       - name: Start Emulator
+         uses: android-actions/start-emulator@v2 # start emulator
+         with:
+            avd-name: pixel_3a 
+            api-level: 30 #Android version
+            disable-animations: true
+       - name: Run Instrumented Tests
+         run: ./gradlew connectedCheck
+       - name: Upload Artifact
+         uses: actions/upload-artifact@v3
+         with:
+           name: MealappApk
+           path: app/build/outputs/apk/debug/app-debug.apk
+          
+     
+      
