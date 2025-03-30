@@ -1,4 +1,4 @@
-name: Andriod Build APK
+name: Andriod CI - Test & Build
 
 on: 
   push:
