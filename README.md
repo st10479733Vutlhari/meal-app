@@ -26,3 +26,6 @@ If the tests were not successfully ran then a red cross will appear and click on
 
 
 https://github.com/st10479733Vutlhari/meal-app/blob/master/app/src/main/java/vcmsa/ci/mealapp/MainActivity.kt
+
+
+https://github.com/st10479733Vutlhari/meal-app/blob/master/.github/workflows/main.yml
