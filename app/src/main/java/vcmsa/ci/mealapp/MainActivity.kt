@@ -14,7 +14,7 @@ import androidx.core.view.WindowInsetsCompat
 import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
-
+    
     private lateinit var timeEditText: EditText
     private lateinit var recommendationTxt: TextView
     private lateinit var mealButton: Button
@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-
+//instructions to find specific part using its ids
         timeEditText = findViewById(R.id.timeEditText)
         recommendationTxt = findViewById(R.id.recommendationTxt)
         mealButton = findViewById(R.id.mealButton)
@@ -35,6 +35,7 @@ class MainActivity : AppCompatActivity() {
         exitButton = findViewById(R.id.exitButton)
 
        //lists of foods
+       //parts of this code was generated using chatgpt 
         val morning = listOf(
             "Porridge with milk",
             "Pancakes with berry fruits and honey syrup",
@@ -69,15 +70,15 @@ class MainActivity : AppCompatActivity() {
             val timeOfDay = timeEditText.text.toString().lowercase()
              if (timeOfDay == "morning") {
                  val selectedFood = morning.random()
-                 recommendationTxt.text = "FOR A PLEASANT MORNING MEAL HOW ABOUT THIS: $selectedFood?"
-                 recommendationTxt.visibility = View.VISIBLE
+                 recommendationTxt.text = "FOR A PLEASANT MORNING MEAL HOW ABOUT THIS: $selectedFood?"//displays morning food recommendation
+                 recommendationTxt.visibility = View.VISIBLE//makes the display text visible to the user
         }else if (timeOfDay == "afternoon") {
             val selectedFood = afternoon.random()
-                 recommendationTxt.text = "FOR A PLEASANT AFTERNOON MEAL HOW ABOUT THIS: $selectedFood?"
+                 recommendationTxt.text = "FOR A PLEASANT AFTERNOON MEAL HOW ABOUT THIS: $selectedFood?"//displays afternoon food recommendation
                  recommendationTxt.visibility = View.VISIBLE
              }else if (timeOfDay == "evening") {
                  val selectedFood = evening.random()
-                 recommendationTxt.text = "FOR A PLEASANT EVENING MEAL HOW ABOUT THIS: $selectedFood?"
+                 recommendationTxt.text = "FOR A PLEASANT EVENING MEAL HOW ABOUT THIS: $selectedFood?"//displays evening food recommendation
                  recommendationTxt.visibility = View.VISIBLE
              }else {
                  recommendationTxt.text = "Please enter 'morning' or 'afternoon' or 'evening,"//prompts user to enter text
