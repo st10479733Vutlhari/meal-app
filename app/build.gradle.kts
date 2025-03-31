@@ -23,6 +23,10 @@ android {
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
+{ variant -> 
+         variant.outputs.all
+{ output -> 
+         outputFileName = "meal-app-release.apk"// name for the release apk
             )
         }
     }
