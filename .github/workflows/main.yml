@@ -22,7 +22,7 @@ jobs:
   runs-on: ubuntu-latest
   
   steps:
-    - uses: actions/checkout@v4.2.1
+    - uses: actions/checkout@v4
 
     # Set Current Date As Env Variable
     - name: Set current date as env variable 
@@ -33,7 +33,7 @@ jobs:
       run: echo "repository_name=${{ github.repository }}" >> $GITHUB_ENV
        
     - name: Set Up JDK
-      uses: actions/setup-java@v4.2
+      uses: actions/setup-java@v4
       with:
          distribution: 'zulu' # See 'Supported distributions' for available options
          java-version: '17'
@@ -68,43 +68,24 @@ jobs:
   # Upload Artifact Build
   # Noted For Output [main_project_module]/build/outputs/apks/debug/
     - name: Upload APK Debug - ${{ env.repository_name }}
-      uses: actions/upload-artifact@v4.2.1
+      uses: actions/upload-artifact@v4
       with: 
         name: ${{ env.date_today }} - ${{ env.playstore_name }} - ${{ env.repository_name }} - APK(s) debug generated
         path: ${{ env.main_project_module }}/build/apk/debug/
 
  # Noted For Output [main_project_module]/build/outouts/apk/release
     - name: Upload APK Release - ${{ env.repository_name }}
-      uses: actions/upload-artifact@v4.2.1
+      uses: actions/upload-artifact@v4
       with:
         name: ${{ env.date_today }} - ${{ env.playstore_name }} - ${{ env.repository_name }} - APK(s) release generated
         path: ${{ env.main_project_module }}/build/apk/release/
 
   # Noted For Output [main_project_module]/build/outouts/apk/release
     - name: Upload AAB (App Bundle) Release - ${{ env.repository_name }}
-      uses: actions/upload-artifact@v4.2.1
+      uses: actions/upload-artifact@v4
       with:
         name: ${{ env.date_name }} - ${{ env.playstore_name }} - ${{ env.repository_name }} - App bundle(s) AAB release generated
         path: ${{ env.main_project_module }}/build/bundle/release/
 
     
-    - name: Download a Build Artifact
-      uses: actions/download-artifact@v4.2.1
-      with:
-    # Name of the artifact to download. If unspecified, all artifacts for the run are downloaded.
-    -  name: # optional
-    # Destination path. Supports basic tilde expansion. Defaults to $GITHUB_WORKSPACE
-       path: # optional
-    # A glob pattern matching the artifacts that should be downloaded. Ignored if name is specified.
-        pattern: # optional
-    # When multiple artifacts are matched, this changes the behavior of the destination directories. If true, the downloaded artifacts will be in the same directory specified by path. If false, the downloaded artifacts will be extracted into individual named directories within the specified path.
-       merge-multiple: # optional, default is false
-    # The GitHub token used to authenticate with the GitHub API. This is required when downloading artifacts from a different repository or from a different workflow run. If this is not specified, the action will attempt to download artifacts from the current repository and the current workflow run.
-       github-token: # optional
-    # The repository owner and the repository name joined together by "/". If github-token is specified, this is the repository that artifacts will be downloaded from.
-     repository: 
-      # optional, default is ${{ github.repository }}
-    # The id of the workflow run where the desired download artifact was uploaded from. If github-token is specified, this is the run that artifacts will be downloaded from.
-       run-id:  
-    # optional, default is ${{ github.run_id }}
-          
+    
