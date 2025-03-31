@@ -25,4 +25,4 @@ check if the artifacts are uploaded.
 If the tests were not successfully ran then a red cross will appear and click on the red cross to see the error and correct it.
 
 
-
+https://github.com/st10479733Vutlhari/meal-app/blob/master/app/src/main/java/vcmsa/ci/mealapp/MainActivity.kt
