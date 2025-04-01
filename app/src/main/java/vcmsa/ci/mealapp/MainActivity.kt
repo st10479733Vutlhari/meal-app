@@ -34,8 +34,8 @@ class MainActivity : AppCompatActivity() {
         clearButton = findViewById(R.id.clearButton)
         exitButton = findViewById(R.id.exitButton)
 
-       //lists of foods
-       //parts of this code was generated using chatgpt 
+       //lists of foods:holds list of item and items can change 
+       //val list of was generated using Gemini except the recommendations
         val morning = listOf(
             "Porridge with milk",
             "Pancakes with berry fruits and honey syrup",
@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
             "Oats with milk",
             "Omelette",
             "Toasted bread with avocado,eggs and a cup of tea"
-        )// change
+        )/
         val afternoon = listOf(
             "Chicken cajun wrap",
             "Sheet pan crispy ramen",
@@ -53,7 +53,7 @@ class MainActivity : AppCompatActivity() {
             "Tacos",
             "Beef stir fry",
             "Snacks(energy bar, muesli and yogurt, potato chips with dip sauce",
-        )// change
+        )
         val evening = listOf(
             "Mac and cheese",
             "Creamy french onion pasta",
@@ -64,7 +64,7 @@ class MainActivity : AppCompatActivity() {
             "Spicy beef with rice and sweetcorn",
             "Skillet lasagna",
             "Deserts(chocolate cake, malva pudding, vanilla ice-cream with cookies, milkshake)"
-        )// change
+        )
          //This button was generated with the help of chatgpt
         mealButton.setOnClickListener {
             val timeOfDay = timeEditText.text.toString().lowercase()
