@@ -28,7 +28,8 @@ If the tests were not successfully ran then a red cross will appear and click on
 https://github.com/st10479733Vutlhari/meal-app/blob/master/app/src/main/java/vcmsa/ci/mealapp/MainActivity.kt
 
 
-https://github.com/st10479733Vutlhari/meal-app/blob/master/.github/workflows/main.yml
+
 
 https://github.com/st10479733Vutlhari/meal-app/actions/runs/14174851980
 
+https://eur03.safelinks.protection.outlook.com/?url=https%3A%2F%2Fyoutube.com%2F%40vutlharimashali%3Fsi%3DnW5Ja1ZnibC_I3NM&data=05%7C02%7Cst10479733%40vcconnect.edu.za%7C77cd339a4cee471026f808dd7118afa2%7Ce10c8f44f469448fbc0dd781288ff01b%7C0%7C0%7C638791073045851887%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=5lhl5oGgYDanBTk3NJ480TgSyVj7yJLvgJVPZAPEIQA%3D&reserved=0
