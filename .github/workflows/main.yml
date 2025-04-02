@@ -1,6 +1,3 @@
-/**
-*code adapted from:
-https://github.com/IMAD5112/Github-actions/blob/main/.github/workflows/build.yml*/
 
 name: Generated APK AAB (Upload - Create Artifact To Github Action)
 
@@ -91,5 +88,5 @@ jobs:
         name: meal-app-release-aab
         path: app/build/outputs/bundle/release/app-release.aab #this code was generated from Gemini
 
-    
+
     
