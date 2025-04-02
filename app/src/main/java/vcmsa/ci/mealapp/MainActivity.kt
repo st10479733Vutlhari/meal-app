@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
         exitButton = findViewById(R.id.exitButton)
 
        //lists of foods:holds list of item and items can change 
-       //val list of was generated using Gemini except the recommendations
+       //val list of was generated using Gemini except the recommendations:https://gemini.google.com/
         val morning = listOf(
             "Porridge with milk",
             "Pancakes with berry fruits and honey syrup",
@@ -65,7 +65,7 @@ class MainActivity : AppCompatActivity() {
             "Skillet lasagna",
             "Deserts(chocolate cake, malva pudding, vanilla ice-cream with cookies, milkshake)"
         )
-         //This button was generated with the help of chatgpt
+         //This button was generated with the help of chatgpt:https://openai.com/
         mealButton.setOnClickListener {
             val timeOfDay = timeEditText.text.toString().lowercase()
              if (timeOfDay == "morning") {
